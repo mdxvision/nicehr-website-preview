@@ -648,55 +648,34 @@ p {
   background: var(--cream-dark);
 }
 
+/* Section Headers - Centered */
 .section-header {
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 64px;
 }
 
-.section-header .eyebrow {
-  margin-bottom: 16px;
+.section-header p {
+  margin: 0 auto;
 }
 
-.section-header h2 {
-  margin-bottom: 24px;
-}
-
-/* Cards */
+/* Cards - Simplified, No Borders, No Shadows */
 .card {
   background: var(--white);
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 4px 20px rgba(20, 32, 59, 0.08);
-  border: 1px solid var(--cream-dark);
+  /* Removed border and shadow for flatter, simpler design */
+  box-shadow: none;
+  border: none;
   transition: var(--transition);
   position: relative;
+  text-align: center;
+  /* Centered content within cards */
 }
 
-.card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  padding: 1px;
-  background: linear-gradient(135deg, transparent 0%, transparent 50%, rgba(212, 175, 55, 0) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.card:hover::after {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--gold) 100%);
-  opacity: 0.3;
-}
-
+/* Removed hover effects that add borders/heavy shadows */
 .card:hover {
-  box-shadow: 0 12px 40px rgba(20, 32, 59, 0.15);
-  transform: translateY(-6px);
-  border-color: var(--gold);
+  transform: translateY(-4px);
 }
 
 .card-icon {
@@ -707,16 +686,20 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
+  /* Centered icon */
   font-size: 1.5rem;
 }
 
-.card h3 {
+.card h3,
+.card h4 {
   margin-bottom: 12px;
 }
 
 .card p {
   margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Cards with Images */
