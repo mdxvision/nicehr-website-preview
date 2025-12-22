@@ -1995,7 +1995,7 @@ p {
 .logo-track {
   display: flex;
   gap: 64px;
-  animation: scroll 40s linear infinite;
+  animation: scroll 60s linear infinite;
   width: fit-content;
 }
 
