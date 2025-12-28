@@ -36,6 +36,13 @@ Intro line: **"Delivery experience across healthcare systems."**
 - Applied Enterprise Apple doctrine compliance fixes (Dec 2025)
 - Renamed "IT Strategic Planning" to "IT Planning" across all navigation
 - Removed taglines and promotional language
+- Fixed "What We Deliver" section - wrapped cards in 3-column grid layout
+
+## Local Development
+```bash
+python3 -m http.server 8000
+open http://localhost:8000
+```
 
 ## Session History
 See @.claude/sessions/2025-12-28-doctrine-fixes.txt for full conversation.
