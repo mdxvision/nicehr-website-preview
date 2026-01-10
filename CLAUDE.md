@@ -37,6 +37,11 @@ Intro line: **"Delivery experience across healthcare systems."**
 - Renamed "IT Strategic Planning" to "IT Planning" across all navigation
 - Removed taglines and promotional language
 - Fixed "What We Deliver" section - wrapped cards in 3-column grid layout
+- Fixed mobile responsive issues (Jan 2026):
+  - Added tap/click support for mobile dropdown navigation
+  - Reduced section/card/header padding on mobile
+  - Fixed testimonial grid overflow
+  - Added mobile nav scroll support
 
 ## Local Development
 ```bash
@@ -55,4 +60,5 @@ Or open `index.html` directly in browser.
 Test with browser dev tools: `Cmd + Option + I` → `Cmd + Shift + M`
 
 ## Session History
-See @.claude/sessions/2025-12-28-doctrine-fixes.txt for full conversation.
+- @.claude/sessions/2025-12-28-doctrine-fixes.txt - Doctrine compliance audit & fixes
+- @.claude/sessions/2026-01-10-mobile-fixes.txt - Mobile responsive fixes
