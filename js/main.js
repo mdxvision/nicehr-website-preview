@@ -11,13 +11,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Close mobile menu when clicking a link
-  const links = navLinks?.querySelectorAll('a');
+  // Close mobile menu when clicking a link (but not dropdown toggles)
+  const links = navLinks?.querySelectorAll('a:not(.nav-dropdown > .nav-link)');
   links?.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
       navToggle?.classList.remove('active');
     });
+  });
+
+  // Mobile dropdown toggle - tap to open/close submenus
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.nav-link');
+    if (toggle) {
+      toggle.addEventListener('click', function(e) {
+        // Only handle on mobile (when nav toggle is visible)
+        if (window.innerWidth <= 968) {
+          e.preventDefault();
+          // Close other dropdowns
+          dropdowns.forEach(d => {
+            if (d !== dropdown) d.classList.remove('active');
+          });
+          // Toggle this dropdown
+          dropdown.classList.toggle('active');
+        }
+      });
+    }
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) {
+      dropdowns.forEach(d => d.classList.remove('active'));
+    }
   });
 
   // Smooth scroll for anchor links
